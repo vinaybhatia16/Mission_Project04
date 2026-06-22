@@ -1,0 +1,25 @@
+package com.sunilos.p4.ctl;
+
+import java.util.List;
+
+public class ProductReportCtl extends BaseReportCtl<BaseBean> {
+
+	@Override
+	public String getView() {
+		// TODO Auto-generated method stub
+		return ProductReportCt;
+	}
+
+	@Override
+	public String getCompiledReportKey() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BaseBean> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
