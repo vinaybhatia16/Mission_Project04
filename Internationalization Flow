@@ -1,0 +1,7 @@
+Form submit — User language select karta hai, onchange="this.form.submit()" trigger hota hai, aur form submit hote hi selected language lang query parameter ke through request ke saath chali jaati hai (e.g. ?lang=hi).
+Filter intercept — LanguageFilter jisme @WebFilter("/*") laga hai, isliye ye har request par automatically chalता hai — chahe wo kisi bhi servlet/JSP ko target kar rahi ho.
+Param extraction — doFilter() method ke andar request.getParameter("lang") se value nikali, aur DataValidator.isNotNull() se check kiya ki value khaali to nahi.
+Locale update — Agar value valid hai to MessageSource.getInstance().setLocale(lang) call hota hai.
+Bundle reload — setLocale() ke andar ResourceBundle.getBundle("message", new Locale(lang)) chalta hai, jo lang=hi hone par message_hi.properties ko load karta hai (aur lang=en hone par message_en.properties).
+Request continues — Filter chain.doFilter() call karta hai, taaki request aage controller/JSP tak pahunche.
+View rendering — JSP me MessageSource.getInstance().get("key") call hota hai, jo abhi load hue bundle se translated text return karta hai, aur EL/expression tag (<%= %> ya ${}) ke through page par print ho jaata hai.
