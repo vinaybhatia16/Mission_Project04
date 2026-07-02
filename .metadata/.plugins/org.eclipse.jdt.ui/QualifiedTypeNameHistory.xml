@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.controller.ORSView"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.controller.BaseCtl"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.model.ServerMonitorModel"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.bean.ServerMonitorBean"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.bean.VehicleBean"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.util.ServletUtility"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.bean.LibraryBean"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.bean.BaseBean"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.model.BusModel"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="in.co.rays.proj4.bean.BusBean"/>
+</qualifiedTypeNameHistroy>
