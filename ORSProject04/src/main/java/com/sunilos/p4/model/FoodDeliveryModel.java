@@ -18,9 +18,8 @@ public class FoodDeliveryModel extends BaseModel<FoodDeliveryBean>{
 		Connection conn = null;
 		int pk = 0;
 
-		FoodDeliveryBean existbean = findBy
-				(bean.getCustomerName());
-
+		FoodDeliveryBean existbean = findByProductName(bean.getCustomerName());
+				
 		if (existbean != null) {
 			throw new DuplicateRecordException("CustomerName already exists");
 		}
@@ -66,8 +65,8 @@ public class FoodDeliveryModel extends BaseModel<FoodDeliveryBean>{
 		
 	}
 	
-	public FoodDeliveryBean findByProductName(String productName) {
-		return findByUniqueColumn("PRODUCT_NAME", productName);
+	public FoodDeliveryBean findByProductName(String customerName) {
+		return findByUniqueColumn("Customer_Name", customerName);
 	}
 
 	@Override
@@ -89,7 +88,7 @@ public class FoodDeliveryModel extends BaseModel<FoodDeliveryBean>{
 	@Override
 	public String getTable() {
 		
-		return "st_foodDelivery";
+		return "st_FoodDelivery";
 	}
 	
 

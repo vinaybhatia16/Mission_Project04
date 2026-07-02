@@ -31,7 +31,7 @@ public class HTMLUtility {
 
 		StringBuffer sb = new StringBuffer("<select class='form-control' name='" + name + "'>");
 
-		Set<String> keys = map.keySet();
+		Set<String> keys = map.keySet(); 
 		String val = null;
 
 		boolean select = true;

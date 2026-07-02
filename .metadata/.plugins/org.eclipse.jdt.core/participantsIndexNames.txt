@@ -1,7 +1,0 @@
-INDEX VERSION 1.134
-E:\New Project4-Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1310756578.index
-\ORSProject04\src\main\java
-E:\New Project4-Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1234369509.index
-\ORSProject04\src\main\java
-E:\New Project4-Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2777630318.index
-\ORSProject04\src\main\java

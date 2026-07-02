@@ -229,91 +229,152 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><a class="dropdown-item" href="<%=ORSView.PRODUCT_CTL%>">
 								<i class="bi bi-person-plus me-2 text-success"></i> Add Product
 						</a></li>
-						<li><a class="dropdown-item" href="<%=ORSView.PRODUCT_LIST_CTL%>"> <i
+						<li><a class="dropdown-item"
+							href="<%=ORSView.PRODUCT_LIST_CTL%>"> <i
 								class="bi bi-person-lines-fill me-2 text-primary"></i> Product
 								List
 						</a></li>
-						
+						<li><a class="dropdown-item"
+							href="<%=ORSView.FOOD_DELIVERY_CTL%>"> <i
+								class="bi bi-person-lines-fill me-2 text-primary"></i> Add Food
+								Delivery
+
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.FOOD_DELIVERY_LIST_CTL%>"> <i
+								class="bi bi-person-lines-fill me-2 text-primary"></i> Food
+								Delivery List
+						</a></li>
+
 					</ul></li>
 
-				<!-- ---- Reports (Admin only) ---- -->
+				<!-- ----Module -->
+
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-file-earmark-bar-graph me-1"></i> Reports
+						class="bi bi-upload me-1"></i> Module
 				</a>
+
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
 						style="min-width: 230px; background: #1a2e4a;">
 
-						<!-- Academics -->
 						<li>
-							<h6 class="dropdown-header text-uppercase text-warning small">
-								<i class="bi bi-mortarboard me-1"></i> Academics
+							<h6 class="dropdown-header text-uppercase text-info small">
+								<i class="bi bi-menu-down me-1"></i> Food Delivery
 							</h6>
 						</li>
+
 						<li><a class="dropdown-item"
-							href="<%=ORSView.COLLEGE_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> College
-								List
+							href="<%=ORSView.FOOD_DELIVERY_CTL%>" target="blank"> <i
+								class="bi bi-egg-fried me-1"></i> Add Food Delivery
 						</a></li>
 						<li><a class="dropdown-item"
-							href="<%=ORSView.COURSE_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Course
-								List
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.SUBJECT_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Subject
-								List
+							href="<%=ORSView.FOOD_DELIVERY_LIST_CTL%>" target="blank"> <i
+								class="bi bi-egg-fried me-1"></i> Food Delivery list
 						</a></li>
 
-						<li><hr class="dropdown-divider border-secondary"></li>
+						</a></li>
+				<li><hr class="dropdown-divider border-secondary"></li>
 
-						<!-- People -->
-						<li>
-							<h6 class="dropdown-header text-uppercase text-warning small">
-								<i class="bi bi-people me-1"></i> People
-							</h6>
-						</li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.STUDENT_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Student
-								List
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.FACULTY_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Faculty
-								List
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.USER_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> User List
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.ROLE_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Role List
-						</a></li>
+				<li>
+					<h6 class="dropdown-header text-uppercase text-info small">
+						<i class="bi bi-menu-down me-1"></i> Payment
+					</h6>
+				</li>
 
-						<li><hr class="dropdown-divider border-secondary"></li>
+				<li><a class="dropdown-item" href="<%=ORSView.PAYMENT_CTL%>"
+					target="blank"> <i class="bi bi-credit-card me-1"></i> Add
+						Payment
+				</a></li>
 
-						<!-- Results -->
-						<li>
-							<h6 class="dropdown-header text-uppercase text-warning small">
-								<i class="bi bi-clipboard-data me-1"></i> Results
-							</h6>
-						</li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.MARKSHEET_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Marksheet
-								List
-						</a></li>
+				<li><a class="dropdown-item" href="<%=ORSView.PAYMENT_LIST_CTL%>" target="blank"> <i
+						class="bi bi-list-ul me-1"></i> Payment List
+				</a></li>
 
-					</ul></li>
-				<%
-				}
-				%>
-				<%-- end isAdmin --%>
+			
+
+			</ul>
+			</li>
+
+			<!-- ---- Reports (Admin only) ---- -->
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle px-3 py-3" href="#"
+				data-bs-toggle="dropdown" aria-expanded="false"> <i
+					class="bi bi-file-earmark-bar-graph me-1"></i> Reports
+			</a>
+				<ul
+					class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
+					style="min-width: 230px; background: #1a2e4a;">
+
+					<!-- Academics -->
+					<li>
+						<h6 class="dropdown-header text-uppercase text-warning small">
+							<i class="bi bi-mortarboard me-1"></i> Academics
+						</h6>
+					</li>
+					<li><a class="dropdown-item"
+						href="<%=ORSView.COLLEGE_REPORT_CTL%>" target="_blank"> <i
+							class="bi bi-file-earmark-pdf me-2 text-warning"></i> College
+							List
+					</a></li>
+					<li><a class="dropdown-item"
+						href="<%=ORSView.COURSE_REPORT_CTL%>" target="_blank"> <i
+							class="bi bi-file-earmark-pdf me-2 text-warning"></i> Course List
+					</a></li>
+					<li><a class="dropdown-item"
+						href="<%=ORSView.SUBJECT_REPORT_CTL%>" target="_blank"> <i
+							class="bi bi-file-earmark-pdf me-2 text-warning"></i> Subject
+							List
+					</a></li>
+
+					<li><hr class="dropdown-divider border-secondary"></li>
+
+					<!-- People -->
+					<li>
+						<h6 class="dropdown-header text-uppercase text-warning small">
+							<i class="bi bi-people me-1"></i> People
+						</h6>
+					</li>
+					<li><a class="dropdown-item"
+						href="<%=ORSView.STUDENT_REPORT_CTL%>" target="_blank"> <i
+							class="bi bi-file-earmark-pdf me-2 text-warning"></i> Student
+							List
+					</a></li>
+					<li><a class="dropdown-item"
+						href="<%=ORSView.FACULTY_REPORT_CTL%>" target="_blank"> <i
+							class="bi bi-file-earmark-pdf me-2 text-warning"></i> Faculty
+							List
+					</a></li>
+					<li><a class="dropdown-item"
+						href="<%=ORSView.USER_REPORT_CTL%>" target="_blank"> <i
+							class="bi bi-file-earmark-pdf me-2 text-warning"></i> User List
+					</a></li>
+					<li><a class="dropdown-item"
+						href="<%=ORSView.ROLE_REPORT_CTL%>" target="_blank"> <i
+							class="bi bi-file-earmark-pdf me-2 text-warning"></i> Role List
+					</a></li>
+
+					<li><hr class="dropdown-divider border-secondary"></li>
+
+					<!-- Results -->
+					<li>
+						<h6 class="dropdown-header text-uppercase text-warning small">
+							<i class="bi bi-clipboard-data me-1"></i> Results
+						</h6>
+					</li>
+					<li><a class="dropdown-item"
+						href="<%=ORSView.MARKSHEET_REPORT_CTL%>" target="_blank"> <i
+							class="bi bi-file-earmark-pdf me-2 text-warning"></i> Marksheet
+							List
+					</a></li>
+
+				</ul></li>
+			<%
+			}
+			%>
+			<%-- end isAdmin --%>
 
 			</ul>
 			<%

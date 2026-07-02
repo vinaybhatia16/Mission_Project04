@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.sunilos.p4.model.BaseModel"/>
-    <fullyQualifiedTypeName name="com.sunilos.p4.bean.BaseBean"/>
-    <fullyQualifiedTypeName name="com.sunilos.p4.ctl.BaseListCtl"/>
-    <fullyQualifiedTypeName name="com.sunilos.p4.bean.ProductBean"/>
-    <fullyQualifiedTypeName name="com.sunilos.p4.model.ProductModel"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
-</qualifiedTypeNameHistroy>

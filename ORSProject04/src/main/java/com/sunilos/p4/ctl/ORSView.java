@@ -43,8 +43,11 @@ public interface ORSView {
 	public String MARKSHEET_MERIT_LIST_VIEW = PAGE_FOLDER + "/MarksheetMeritListView.jsp";
 	public String PRODUCT_VIEW = PAGE_FOLDER + "/ProductView.jsp";
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
-	
-	
+	public String FOOD_DELIVERY_VIEW = PAGE_FOLDER + "/FoodDeliveryView.jsp";
+	public String FOOD_DELIVERY_LIST_VIEW = PAGE_FOLDER + "/FoodDeliveryListView.jsp";
+	public String PAYMENT_VIEW = PAGE_FOLDER + "/PaymentView.jsp";
+	public String PAYMENT_LIST_VIEW = PAGE_FOLDER + "/PaymentListView.jsp";
+
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
 	public String PRODUCT_CTL = APP_CONTEXT + "/ctl/ProductCtl";
 	public String MARKSHEET_CTL = APP_CONTEXT + "/ctl/MarksheetCtl";
@@ -70,6 +73,8 @@ public interface ORSView {
 	public String MY_PROFILE_CTL = APP_CONTEXT + "/ctl/MyProfileCtl";
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
+	public String FOOD_DELIVERY_CTL = APP_CONTEXT + "/ctl/FoodDeliveryCtl";
+	public String FOOD_DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/FoodDeliveryListCtl";
 
 	public String FACULTY_VIEW = PAGE_FOLDER + "/FacultyView.jsp";
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
@@ -85,9 +90,9 @@ public interface ORSView {
 	public String MARKSHEET_REPORT_CTL = APP_CONTEXT + "/ctl/MarksheetReportCtl";
 	public String FACULTY_REPORT_CTL = APP_CONTEXT + "/ctl/FacultyReportCtl";
 	public String PRODUCT_REPORT_CTL = APP_CONTEXT + "/ctl/ProductReportCtl";
-	
-	
-	
+	public String PAYMENT_CTL = APP_CONTEXT + "/ctl/PaymentCtl";
+	public String PAYMENT_LIST_CTL = APP_CONTEXT + "/ctl/PaymentListCtl";
+
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
 	public String COLLEGE_REPORT_VIEW = "/reports/CollegeListReport.jrxml";

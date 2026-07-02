@@ -11,6 +11,7 @@
 	scope="request"></jsp:useBean>
 
 <%
+
 List l = (List) request.getAttribute("roleList");
 String _suc = ServletUtility.getSuccessMessage(request);
 String _err = ServletUtility.getErrorMessage(request);
