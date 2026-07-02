@@ -1,0 +1,81 @@
+pipeline {
+    agent any
+
+    environment {
+
+        // Java + Maven (Jenkins installed tools path)
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-21.0.11"
+        MAVEN_HOME = "C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.tasks.Maven_MavenInstallation\\Maven-3.9"
+
+        // Tomcat 9
+        TOMCAT_WEBAPPS = "E:\\Server\\apache-tomcat-9.0.116\\webapps"
+        TOMCAT_SERVICE = "Tomcat9"
+
+        // App name
+        APP_NAME = "ORSProject04"
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/vinaybhatia16/Mission_Project04.git'
+            }
+        }
+
+        stage('Build WAR') {
+            steps {
+                dir('ORSProject04') {
+                    bat '"%MAVEN_HOME%\\bin\\mvn.cmd" clean package -DskipTests'
+                }
+            }
+        }
+
+        stage('Stop Tomcat') {
+            steps {
+                bat 'sc stop Tomcat9 || exit /b 0'
+            }
+        }
+
+        stage('Clean Old Deployment') {
+            steps {
+                bat '''
+                if exist "%TOMCAT_WEBAPPS%\\%APP_NAME%" rmdir /S /Q "%TOMCAT_WEBAPPS%\\%APP_NAME%"
+                if exist "%TOMCAT_WEBAPPS%\\%APP_NAME%.war" del /F /Q "%TOMCAT_WEBAPPS%\\%APP_NAME%.war"
+                '''
+            }
+        }
+
+        stage('Deploy WAR') {
+            steps {
+                bat '''
+                copy /Y "ORSProject04\\target\\%APP_NAME%.war" "%TOMCAT_WEBAPPS%\\"
+                '''
+            }
+        }
+
+        stage('Start Tomcat') {
+            steps {
+                bat 'sc start Tomcat9'
+            }
+        }
+
+        stage('Archive Artifact') {
+            steps {
+                archiveArtifacts artifacts: 'ORSProject04/target/*.war', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "Deployment Successful!"
+            echo "Application URL: http://localhost:8080/ORSProject04/"
+        }
+
+        failure {
+            echo "Deployment Failed! Check Jenkins logs."
+        }
+    }
+}
