@@ -60,7 +60,7 @@ public class GetMarksheetCtl extends BaseCtl<MarksheetBean, MarksheetModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.GET_MARKSHEET_VIEW;
 	}
 
 	@Override

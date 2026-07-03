@@ -12,7 +12,6 @@ public class ProductModel extends BaseModel<ProductBean> {
 
 	@Override
 	public long add(ProductBean bean) throws ApplicationException, DuplicateRecordException {
-		
 		log.debug("Model add Started");
 		Connection conn = null;
 		int pk = 0;
@@ -56,19 +55,17 @@ public class ProductModel extends BaseModel<ProductBean> {
 		}
 		log.debug("Model add End");
 		return pk;
-	
 	}
 
 	@Override
 	public void update(ProductBean bean) throws ApplicationException, DuplicateRecordException {
-		
+		// TODO Auto-generated method stub
+
 	}
-	
-	
 
 	@Override
 	public String getWhereClause(ProductBean bean) {
-		
+
 		StringBuffer sql = new StringBuffer();
 
 		if (bean != null) {
@@ -89,13 +86,11 @@ public class ProductModel extends BaseModel<ProductBean> {
 
 	@Override
 	public String getTable() {
-		
 		return "st_product";
 	}
 
 	@Override
 	public ProductBean getBean() {
-		
 		return new ProductBean();
 	}
 

@@ -133,7 +133,7 @@ public class ChangePasswordCtl extends BaseCtl<UserBean, UserModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.CHANGE_PASSWORD_VIEW;
 	}
 
 	@Override

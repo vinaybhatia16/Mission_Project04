@@ -90,7 +90,7 @@ public class CollegeCtl extends BaseCtl<CollegeBean, CollegeModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.COLLEGE_VIEW;
 	}
 
 	@Override

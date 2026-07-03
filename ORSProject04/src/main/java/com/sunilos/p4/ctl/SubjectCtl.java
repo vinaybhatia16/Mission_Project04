@@ -1,8 +1,6 @@
 package com.sunilos.p4.ctl;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServletRequest;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -14,7 +12,8 @@ import com.sunilos.p4.util.DataUtility;
 import com.sunilos.p4.util.DataValidator;
 import com.sunilos.p4.util.PropertyReader;
 
-import java.util.List;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServletRequest;
 
 @WebServlet("/ctl/SubjectCtl")
 public class SubjectCtl extends BaseCtl<SubjectBean, SubjectModel> {
@@ -83,7 +82,7 @@ public class SubjectCtl extends BaseCtl<SubjectBean, SubjectModel> {
 
     @Override
     protected String getView() {
-        return getView(null);
+        return ORSView.SUBJECT_VIEW;
     }
 
     @Override

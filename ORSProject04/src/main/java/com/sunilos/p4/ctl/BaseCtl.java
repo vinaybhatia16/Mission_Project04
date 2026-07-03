@@ -1,4 +1,4 @@
- package com.sunilos.p4.ctl;
+package com.sunilos.p4.ctl;
 
 import java.io.IOException;
 
@@ -142,10 +142,6 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 		if (OP_CANCEL.equalsIgnoreCase(op)) {
 			ServletUtility.redirect(getView(op), request, response);
 			return;
-		} else if (OP_DELETE.equalsIgnoreCase(op) && !(this instanceof BaseListCtl)) {
-			// Handle Delete operation
-			doDelete(request, response);
-			return;
 		}
 
 		BaseBean bean = populateBean(request);
@@ -160,7 +156,6 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 		try {
 			super.service(request, response);
 		} catch (DuplicateRecordException e) {
-			// Handle if any duplicate record exception
 			ServletUtility.setBean(bean, request);
 			ServletUtility.setErrorMessage(e.getMessage(), request);
 			ServletUtility.forwardPage(getView(), request, response);
@@ -201,7 +196,7 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 		String op = DataUtility.getString(request.getParameter("operation"));
 
 		// get model
- 
+
 		long id = DataUtility.getLong(request.getParameter("id"));
 
 		B bean = populateBean(request);

@@ -118,7 +118,7 @@ public class StudentCtl extends BaseCtl {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.STUDENT_VIEW;
 	}
 
 	@Override

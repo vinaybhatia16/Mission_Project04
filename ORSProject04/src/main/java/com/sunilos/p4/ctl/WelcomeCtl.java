@@ -23,7 +23,7 @@ public class WelcomeCtl extends BaseCtl {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.WELCOME_VIEW;
 	}
 
 	@Override

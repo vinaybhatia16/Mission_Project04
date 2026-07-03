@@ -32,7 +32,7 @@ public class RoleListCtl extends BaseListCtl<RoleBean, RoleModel> {
 
 	@Override
 	protected String getView() {
-		return getView();
+		return ORSView.ROLE_LIST_VIEW;
 	}
 
 	@Override

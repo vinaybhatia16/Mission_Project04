@@ -73,7 +73,7 @@ public class MarksheetMeritListCtl extends BaseListCtl<MarksheetBean, MarksheetM
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.MARKSHEET_MERIT_LIST_VIEW;
 	}
 
 	@Override

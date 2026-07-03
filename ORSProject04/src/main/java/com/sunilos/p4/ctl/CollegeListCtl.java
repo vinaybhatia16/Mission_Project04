@@ -33,7 +33,7 @@ public class CollegeListCtl extends BaseListCtl<CollegeBean, CollegeModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.COLLEGE_LIST_VIEW;
 	}
 
 	@Override

@@ -79,7 +79,7 @@ public class RoleCtl extends BaseCtl<RoleBean, RoleModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.ROLE_VIEW;
 	}
 
 	@Override

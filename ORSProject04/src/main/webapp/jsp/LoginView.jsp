@@ -29,7 +29,7 @@ MessageSource ms = MessageSource.getInstance();
 					<div
 						class="rounded-circle d-flex align-items-center justify-content-center"
 						style="width: 68px; height: 68px; background: rgba(255, 255, 255, 0.18); border: 2px solid rgba(255, 255, 255, 0.3); font-size: 1.9rem;">
-						<i class="fas fa-graduation-cap"></i>
+						<i class="bi bi-mortarboard-fill"></i>
 					</div>
 				</div>
 				<h4 class="fw-bold mb-1">

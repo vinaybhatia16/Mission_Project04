@@ -51,7 +51,7 @@ public class MarksheetListCtl extends BaseListCtl<MarksheetBean, MarksheetModel>
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.MARKSHEET_LIST_VIEW;
 	}
 
 	@Override

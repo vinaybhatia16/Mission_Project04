@@ -25,7 +25,7 @@ public class SubjectListCtl extends BaseListCtl<SubjectBean, SubjectModel> {
 
     @Override
     protected String getView() {
-        return getView();
+        return ORSView.SUBJECT_LIST_VIEW;
     }
 
     @Override

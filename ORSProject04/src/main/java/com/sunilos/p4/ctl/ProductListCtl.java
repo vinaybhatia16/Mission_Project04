@@ -21,22 +21,18 @@ public class ProductListCtl extends BaseListCtl<ProductBean, ProductModel> {
 		bean.setPrice(DataUtility.getInt(request.getParameter("price")));
 
 		populateDTO(bean, request);
+
 		return bean;
 	}
 
 	@Override
 	protected String getView() {
-		return ORSView.PRODUCT_LIST_VIEW;
+		return ORSView.PRODUCT_VIEW;
 	}
 
 	@Override
 	protected String getView(String op) {
-		if (OP_NEW.equals(op)) {
-			return ORSView.PRODUCT_CTL;
-		} else {
-			return ORSView.PRODUCT_LIST_VIEW;
-		}
-
+		return ORSView.PRODUCT_LIST_VIEW;
 	}
 
 	@Override

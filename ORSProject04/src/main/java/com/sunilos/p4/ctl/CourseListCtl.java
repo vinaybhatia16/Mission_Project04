@@ -25,7 +25,7 @@ public class CourseListCtl extends BaseListCtl<CourseBean, CourseModel> {
 
     @Override
     protected String getView() {
-        return getView();
+    	 return ORSView.COURSE_LIST_VIEW;
     }
 
     @Override

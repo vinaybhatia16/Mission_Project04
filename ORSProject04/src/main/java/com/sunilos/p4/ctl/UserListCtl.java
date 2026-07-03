@@ -51,7 +51,7 @@ public class UserListCtl extends BaseListCtl<UserBean, UserModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.USER_LIST_VIEW;
 	}
 
 	@Override

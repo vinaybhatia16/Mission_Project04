@@ -129,7 +129,7 @@ public class MarksheetCtl extends BaseCtl<MarksheetBean, MarksheetModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.MARKSHEET_VIEW;
 	}
 
 	@Override

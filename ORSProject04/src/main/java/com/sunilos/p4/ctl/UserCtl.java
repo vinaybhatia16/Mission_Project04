@@ -56,9 +56,6 @@ public class UserCtl extends BaseCtl<UserBean, UserModel> {
 		if (DataValidator.isNull(request.getParameter("firstName"))) {
 			request.setAttribute("firstName", PropertyReader.getValue("error.require", "First Name"));
 			pass = false;
-		}else if (!DataValidator.isName(request.getParameter("firstName"))) {
-				request.setAttribute("firstName", "Invalid First Name");
-				pass = false;
 		}
 
 		if (DataValidator.isNull(request.getParameter("lastName"))) {
@@ -140,7 +137,7 @@ public class UserCtl extends BaseCtl<UserBean, UserModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.USER_VIEW;
 	}
 
 	@Override

@@ -46,7 +46,7 @@ public class StudentListCtl extends BaseListCtl<StudentBean, StudentModel> {
 
 	@Override
 	protected String getView() {
-		return getView(null);
+		return ORSView.STUDENT_LIST_VIEW;
 	}
 
 	@Override

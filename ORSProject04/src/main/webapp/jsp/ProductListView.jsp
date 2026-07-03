@@ -21,18 +21,18 @@ String _err = ServletUtility.getErrorMessage(request);
 			class="card-header text-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
 			<h5 class="mb-0 fw-bold">
-				<i class="bi bi-bookmark-star-fill me-2"></i> Subject List
+				<i class="bi bi-cart me-2"></i> Product List
 			</h5>
 			<div class="d-flex gap-2">
-				<a href="<%=ORSView.PRODUCT_REPORT_CTL%>" target="_blank"
+				<a href="#" target="_blank"
 					class="btn btn-sm btn-warning fw-semibold"> <i
 					class="bi bi-file-earmark-pdf me-1"></i> Print PDF
-				</a> <a href="<%=ORSView.PRODUCT_REPORT_CTL%>?type=doc" target="_blank"
+				</a> <a href="#?type=doc" target="_blank"
 					class="btn btn-sm btn-info fw-semibold"> <i
 					class="bi bi-file-earmark-word me-1"></i> Print DOC
 				</a> <a href="<%=ORSView.PRODUCT_CTL%>"
 					class="btn btn-sm btn-light text-primary fw-semibold"> <i
-					class="bi bi-plus-circle me-1"></i> Add Product
+					class="bi bi-cart me-1"></i> Add Subject
 				</a>
 			</div>
 		</div>
@@ -43,9 +43,14 @@ String _err = ServletUtility.getErrorMessage(request);
 
 			<div
 				class="p-3 bg-light border-bottom d-flex flex-wrap gap-2 align-items-center">
-				<input type="text" name="name" class="form-control form-control-sm"
-					style="max-width: 220px;" placeholder="Search by ProductName"
-					value="<%=ServletUtility.getParameter("name", request)%>">
+				<input type="text" name="productName"
+					class="form-control form-control-sm" style="max-width: 220px;"
+					placeholder="Search by ProductName"
+					value="<%=ServletUtility.getParameter("productName", request)%>">
+				<input type="text" name="productName"
+					class="form-control form-control-sm" style="max-width: 220px;"
+					placeholder="Search by ProductName"
+					value="<%=ServletUtility.getParameter("productName", request)%>">
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 					<i class="bi bi-search me-1"></i> Search
@@ -53,7 +58,7 @@ String _err = ServletUtility.getErrorMessage(request);
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto"
-					onclick="return confirm('Delete selected subjects?')">
+					>
 					<i class="bi bi-trash me-1"></i> Delete Selected
 				</button>
 			</div>
@@ -69,18 +74,16 @@ String _err = ServletUtility.getErrorMessage(request);
 
 			<div class="table-responsive">
 				<table class="table table-hover align-middle mb-0">
-					<thead class="table-light">
+					<thead class="table-dark">
 						<tr>
 							<th width="40"><input type="checkbox"
 								onclick="document.querySelectorAll('input[name=ids]').forEach(c=>c.checked=this.checked)"></th>
-							<th>S.No</th>
-
-							<th>Product Name</th>
-							<th>Category</th>
+							<th>S No.</th>
+							<th>ProductName</th>
+							<th>Product Category</th>
 							<th>Order Date</th>
 							<th>Price</th>
-
-							<th>Action</th>
+							<th>Edit</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -92,7 +95,6 @@ String _err = ServletUtility.getErrorMessage(request);
 							<td><input type="checkbox" name="ids"
 								value="<%=bean.getId()%>"></td>
 							<td class="text-muted small"><%=index++%></td>
-
 							<td class="fw-semibold"><%=bean.getProductName()%></td>
 							<td><%=bean.getProductCategory()%></td>
 							<td><%=bean.getOrderDate()%></td>

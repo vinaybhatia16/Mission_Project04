@@ -340,19 +340,19 @@ public class UserModel extends BaseModel<UserBean> {
 		long pk = add(bean);
 
 		try {
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("login", bean.getLogin());
-		map.put("password", bean.getPassword());
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("login", bean.getLogin());
+			map.put("password", bean.getPassword());
 
-		String message = EmailBuilder.getUserRegistrationMessage(map);
+			String message = EmailBuilder.getUserRegistrationMessage(map);
 
-		EmailMessage msg = new EmailMessage();
+			EmailMessage msg = new EmailMessage();
 
-		msg.setTo(bean.getLogin());
-		msg.setSubject("Registration is successful for ORS Project Rays Technologies");
-		msg.setMessage(message);
-		msg.setMessageType(EmailMessage.HTML_MSG);
-		EmailUtility.sendMail(msg);
+			msg.setTo(bean.getLogin());
+			msg.setSubject("Registration is successful for ORS Project Rays Technologies");
+			msg.setMessage(message);
+			msg.setMessageType(EmailMessage.HTML_MSG);
+			EmailUtility.sendMail(msg);
 
 		} catch (ApplicationException e) {
 			log.error("Email Server error, your emails may get delay", e);
