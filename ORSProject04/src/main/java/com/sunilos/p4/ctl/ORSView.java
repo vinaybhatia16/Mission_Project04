@@ -92,6 +92,7 @@ public interface ORSView {
 	public String PRODUCT_REPORT_CTL = APP_CONTEXT + "/ctl/ProductReportCtl";
 	public String PAYMENT_CTL = APP_CONTEXT + "/ctl/PaymentCtl";
 	public String PAYMENT_LIST_CTL = APP_CONTEXT + "/ctl/PaymentListCtl";
+	public String PAYMENT_REPORT_CTL = APP_CONTEXT + "/ctl/PaymentReportCtl";
 
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
@@ -102,4 +103,5 @@ public interface ORSView {
 	public String MARKSHEET_REPORT_VIEW = "/reports/MarksheetListReport.jrxml";
 	public String FACULTY_REPORT_VIEW = "/reports/FacultyListReport.jrxml";
 	public String PRODUCT_REPORT_VIEW = "/reports/ProductListReport.jrxml";
+	public String PAYMENT_REPORT_VIEW = "/reports/PaymentListReport.jrxml";
 }
