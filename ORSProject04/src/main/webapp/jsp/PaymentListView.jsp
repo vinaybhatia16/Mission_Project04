@@ -41,8 +41,7 @@ MessageSource ms = MessageSource.getInstance();
 				</a> <a href="<%=ORSView.PAYMENT_REPORT_CTL%>?type=doc" target="_blank"
 					class="btn btn-sm btn-info fw-semibold"> <i
 					class="bi bi-file-earmark-word me-1"></i> Print DOC
-				</a>
-				</a>
+				</a> </a>
 			</div>
 			<a href="<%=ORSView.PAYMENT_CTL%>"
 				class="btn btn-light text-primary fw-semibold"> <i

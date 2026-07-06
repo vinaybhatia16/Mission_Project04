@@ -26,6 +26,7 @@ com\sunilos\p4\model\RoleModel.class
 com\sunilos\p4\model\test\UserModelTest.class
 com\sunilos\p4\ctl\LoginCtl.class
 com\sunilos\p4\ctl\CollegeListCtl.class
+com\sunilos\p4\ctl\PaymentReportCtl.class
 com\sunilos\p4\ctl\ChangePasswordCtl.class
 com\sunilos\p4\model\CollegeModel.class
 com\sunilos\p4\ctl\RoleCtl.class
