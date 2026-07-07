@@ -119,7 +119,7 @@ public abstract class BaseListCtl<B extends BaseBean, M extends BaseModel> exten
 
 		// Store list into request object
 		// लिस्ट को रिक्वेस्ट ऑब्जेक्ट में स्टोर कर।
-		ServletUtility.setList(list, request);
+		ServletUtility.setList(list, request);  
 
 		// Store next list into request object for pagination control
 		// अगली लिस्ट को रिक्वेस्ट ऑब्जेक्ट में स्टोर करे पेजिनेशन कंट्रोल के लिए
