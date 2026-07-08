@@ -8,6 +8,7 @@ com\sunilos\p4\util\MessageSource.class
 com\sunilos\p4\model\ProductModel.class
 com\sunilos\p4\ctl\ProductReportCtl.class
 com\sunilos\p4\model\SubjectModel.class
+com\sunilos\p4\ctl\UploadPhotoCtl.class
 com\sunilos\p4\ctl\GetMarksheetCtl.class
 com\sunilos\p4\util\DataUtility.class
 com\sunilos\p4\ctl\MyProfileCtl.class
