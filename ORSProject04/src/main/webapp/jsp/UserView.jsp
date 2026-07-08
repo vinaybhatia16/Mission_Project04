@@ -35,27 +35,45 @@ genderMap.put("F", "Female");
 			<%
 			if (_suc != null && !_suc.isEmpty()) {
 			%>
-			<div class="alert alert-success alert-dismissible py-2">
-				<i class="bi bi-check-circle-fill me-2"></i><%=_suc%>
-				<button type="button" class="btn-close" data-bs-dismiss="alert"
-					aria-label="Close"></button>
-			</div>
+			<div class="alert alert-success py-2">
+				<i class="bi bi-check-circle-fill me-2"></i><%=_suc%></div>
 			<%
 			}
 			%>
 			<%
 			if (_err != null && !_err.isEmpty()) {
 			%>
-			<div class="alert alert-danger alert-dismissible py-2">
-				<i class="bi bi-exclamation-triangle-fill me-2"></i><%=_err%>
-				<button type="button" class="btn-close" data-bs-dismiss="alert"
-					aria-label="Close"></button>
+			<div class="alert alert-danger py-2">
+				<i class="bi bi-exclamation-triangle-fill me-2"></i><%=_err%></div>
+			<%
+			}
+			%>
+
+			<%
+			if (bean.getId() > 0) {
+			%>
+			<div class="d-flex align-items-center gap-3 mb-4">
+				<img src="<%=ORSView.UPLOAD_PHOTO_CTL%>?id=<%=bean.getId()%>"
+					onerror="this.style.display='none';" alt="User Photo"
+					class="rounded-circle border" width="80" height="80"
+					style="object-fit: cover;">
+				<form action="<%=ORSView.UPLOAD_PHOTO_CTL%>" method="POST"
+					enctype="multipart/form-data"
+					class="d-flex align-items-center gap-2">
+					<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
+						type="file" name="photo" class="form-control form-control-sm"
+						accept="image/*">
+					<button type="submit"
+						class="btn btn-sm btn-outline-primary text-nowrap">
+						<i class="bi bi-upload me-1"></i> Upload Photo
+					</button>
+				</form>
 			</div>
 			<%
 			}
 			%>
 
-			<form action="<%=ORSView.USER_CTL%>" method="POST">
+			<form name="userForm" action="<%=ORSView.USER_CTL%>" method="POST">
 				<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
 					type="hidden" name="createdBy" value="<%=bean.getCreatedBy()%>">
 				<input type="hidden" name="modifiedBy"
@@ -69,14 +87,14 @@ genderMap.put("F", "Female");
 					<div class="col-md-6">
 						<label class="form-label fw-semibold">First Name <span
 							class="text-danger">*</span></label> <input type="text" name="firstName"
-							placeholder="Enter your firstName" class="form-control"
+							class="form-control"
 							value="<%=DataUtility.getStringData(bean.getFirstName())%>">
 						<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("firstName", request)%></div>
 					</div>
 					<div class="col-md-6">
 						<label class="form-label fw-semibold">Last Name <span
 							class="text-danger">*</span></label> <input type="text" name="lastName"
-							placeholder="Enter your lastName" class="form-control"
+							class="form-control"
 							value="<%=DataUtility.getStringData(bean.getLastName())%>">
 						<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("lastName", request)%></div>
 					</div>
@@ -85,7 +103,7 @@ genderMap.put("F", "Female");
 				<div class="mb-3">
 					<label class="form-label fw-semibold">Login ID <span
 						class="text-danger">*</span></label> <input type="text" name="login"
-						placeholder="Enter your login" class="form-control"
+						class="form-control"
 						value="<%=DataUtility.getStringData(bean.getLogin())%>"
 						<%=(bean.getId() > 0) ? "readonly" : ""%>>
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("login", request)%></div>
@@ -95,16 +113,14 @@ genderMap.put("F", "Female");
 					<div class="col-md-6">
 						<label class="form-label fw-semibold">Password <span
 							class="text-danger">*</span></label> <input type="password"
-							placeholder="Enter your password" name="password"
-							class="form-control"
+							name="password" class="form-control"
 							value="<%=DataUtility.getStringData(bean.getPassword())%>">
 						<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("password", request)%></div>
 					</div>
 					<div class="col-md-6">
 						<label class="form-label fw-semibold">Confirm Password <span
 							class="text-danger">*</span></label> <input type="password"
-							name="confirmPassword" placeholder="Enter password again"
-							class="form-control"
+							name="confirmPassword" class="form-control"
 							value="<%=DataUtility.getStringData(bean.getPassword())%>">
 						<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("confirmPassword", request)%></div>
 					</div>
@@ -125,10 +141,11 @@ genderMap.put("F", "Female");
 					<label class="form-label fw-semibold">Date of Birth
 						(mm/dd/yyyy)</label>
 					<div class="input-group">
-						<input type="text" name="dob" id="udate" class="form-control" placeholder="Select date of birth"
-							readonly value="<%=DataUtility.getDateString(bean.getDob())%>">
-						<a class="btn btn-outline-secondary"> <img
-							src="../img/cal.jpg" width="16" height="15" alt="Calendar">
+						<input type="text" name="dob" id="udate" class="form-control"
+							placeholder="Select date of birth" readonly
+							value="<%=DataUtility.getDateString(bean.getDob())%>"> <a
+							class="btn btn-outline-secondary"> <img src="../img/cal.jpg"
+							width="16" height="15" alt="Calendar">
 						</a>
 					</div>
 					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("dob", request)%></div>

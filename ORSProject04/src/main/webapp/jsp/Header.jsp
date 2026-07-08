@@ -218,34 +218,6 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.ROLE_LIST_CTL%>"> <i
 								class="bi bi-shield-fill-check me-2 text-primary"></i> Role List
 						</a></li>
-						<li><hr class="dropdown-divider border-secondary"></li>
-
-						<!-- Product -->
-						<li>
-							<h6 class="dropdown-header text-uppercase text-info small">
-								<i class="bi bi-person-gear me-1"></i> Product
-							</h6>
-						</li>
-						<li><a class="dropdown-item" href="<%=ORSView.PRODUCT_CTL%>">
-								<i class="bi bi-person-plus me-2 text-success"></i> Add Product
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.PRODUCT_LIST_CTL%>"> <i
-								class="bi bi-person-lines-fill me-2 text-primary"></i> Product
-								List
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.FOOD_DELIVERY_CTL%>"> <i
-								class="bi bi-person-lines-fill me-2 text-primary"></i> Add Food
-								Delivery
-
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.FOOD_DELIVERY_LIST_CTL%>"> <i
-								class="bi bi-person-lines-fill me-2 text-primary"></i> Food
-								Delivery List
-						</a></li>
-
 					</ul></li>
 
 				<!-- ----Module -->
@@ -289,11 +261,26 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						Payment
 				</a></li>
 
-				<li><a class="dropdown-item" href="<%=ORSView.PAYMENT_LIST_CTL%>" target="blank"> <i
+				<li><a class="dropdown-item"
+					href="<%=ORSView.PAYMENT_LIST_CTL%>" target="blank"> <i
 						class="bi bi-list-ul me-1"></i> Payment List
 				</a></li>
+				<li><hr class="dropdown-divider border-secondary"></li>
+				<!-- Product -->
+				<li>
+					<h6 class="dropdown-header text-uppercase text-info small">
+						<i class="bi bi-person-gear me-1"></i> Product
+					</h6>
+				</li>
+				<li><a class="dropdown-item" href="<%=ORSView.PRODUCT_CTL%>">
+						<i class="bi bi-person-plus me-2 text-success"></i> Add Product
+				</a></li>
+				<li><a class="dropdown-item"
+					href="<%=ORSView.PRODUCT_LIST_CTL%>"> <i
+						class="bi bi-person-lines-fill me-2 text-primary"></i> Product
+						List
+				</a></li>
 
-			
 
 			</ul>
 			</li>
@@ -416,11 +403,11 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				%>
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle d-flex align-items-center gap-1 px-2"
-					href="#" data-bs-toggle="dropdown" aria-expanded="false"> <span
-						class="rounded-circle bg-white text-primary d-flex align-items-center justify-content-center fw-bold"
-						style="width: 28px; height: 28px; font-size: 0.75rem; flex-shrink: 0;">
-							<%=userBean.getFirstName().substring(0, 1).toUpperCase()%>
-					</span> <span class="d-none d-lg-inline small"><%=userBean.getFirstName()%></span>
+					href="#" data-bs-toggle="dropdown" aria-expanded="false"> <img
+						src="<%=ORSView.UPLOAD_PHOTO_CTL%>?id=<%=userBean.getId()%>"
+						alt="User Photo" class="rounded-circle border" width="28"
+						height="28" style="object-fit: cover; flex-shrink: 0;"> <span
+						class="d-none d-lg-inline small"><%=userBean.getFirstName()%></span>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow border-0 rounded-3"
