@@ -16,6 +16,6 @@ List nextList = (List) request.getAttribute("nextList");
 	<button type="submit" name="operation" value="<%=BaseCtl.OP_NEXT%>"
 		class="btn btn-outline-primary btn-sm"
 		<%=nextList.size() == 0 ? "disabled" : ""%>>
-		Next <i class="bi bi-chevron-right"></i>
+		Next <i class="bi bi-chevron-right"></i> 
 	</button>
 </div>

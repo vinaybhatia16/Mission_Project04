@@ -8,7 +8,7 @@ MessageSource ms = MessageSource.getInstance();
 String locale = ms.getLanguage();
 UserBean userBean = (UserBean) session.getAttribute("user");
 boolean loggedIn = userBean != null;
-boolean isAdmin = loggedIn && userBean.getRoleId() == RoleBean.ADMIN;
+boolean isAdmin = loggedIn && userBean.getRoleId() == RoleBean.ADMIN; 
 boolean isStudent = loggedIn && userBean.getRoleId() == RoleBean.STUDENT;
 String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttribute("role") + ")" : "Guest";
 %>
@@ -441,9 +441,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.LOGIN_CTL%>?operation=<%=LoginCtl.OP_LOG_OUT%>">
 								<i class="bi bi-box-arrow-right me-2"></i> Logout
 						</a></li>
-					</ul></li>
-
-				<%
+					</ul></li> <% 
 				} else {
 				%>
 				<!-- Login button (guest) -->
