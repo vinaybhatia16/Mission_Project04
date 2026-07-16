@@ -77,7 +77,6 @@ public interface ORSView {
 	public String FOOD_DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/FoodDeliveryListCtl";
 	public String UPLOAD_PHOTO_CTL = APP_CONTEXT + "/ctl/UploadPhotoCtl";
 
-
 	public String FACULTY_VIEW = PAGE_FOLDER + "/FacultyView.jsp";
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
 	public String FACULTY_CTL = APP_CONTEXT + "/ctl/FacultyCtl";
