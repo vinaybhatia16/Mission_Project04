@@ -35,7 +35,7 @@ public class UploadPhotoCtl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private static Logger log = Logger.getLogger(UploadPhotoCtl.class);
-	
+
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -132,11 +132,11 @@ public class UploadPhotoCtl extends HttpServlet {
 		UserBean bean = model.findByPK(id);
 		ServletUtility.setBean(bean, request);
 		String view = request.getParameter("view");
-
+		
 		Part part = request.getPart("photo");
 		if (part == null || part.getSize() == 0) {
 			ServletUtility.setErrorMessage("Photo is required", request);
-			ServletUtility.forwardPage(getView(), request, response);
+			ServletUtility.forwardPage(view, request, response);
 			return;
 		}
 
@@ -168,8 +168,6 @@ public class UploadPhotoCtl extends HttpServlet {
 		input.close();
 		output.close();
 
-		
-
 		try {
 
 			// Update photo name in database
@@ -197,8 +195,5 @@ public class UploadPhotoCtl extends HttpServlet {
 		} else {
 			response.sendRedirect("UserCtl?id=" + id);
 		}
-	}
-	public String getView() {
-		return ORSView.USER_VIEW;
 	}
 }

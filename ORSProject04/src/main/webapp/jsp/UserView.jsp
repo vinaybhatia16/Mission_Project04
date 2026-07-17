@@ -60,6 +60,7 @@ genderMap.put("F", "Female");
 				<form action="<%=ORSView.UPLOAD_PHOTO_CTL%>" method="POST"
 					enctype="multipart/form-data"
 					class="d-flex align-items-center gap-2">
+					<input type="hidden" name="view" value="<%=ORSView.USER_VIEW%>">
 					<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
 						type="file" name="photo" class="form-control form-control-sm"
 						accept="image/*">
