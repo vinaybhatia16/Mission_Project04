@@ -18,14 +18,6 @@ import com.sunilos.p4.util.DataValidator;
 import com.sunilos.p4.util.PropertyReader;
 import com.sunilos.p4.util.ServletUtility;
 
-/**
- * My Profile functionality Controller. Performs operation for update your
- * Profile
- * 
- * @author Rays EdTech
- * @version 1.0
- * @Copyright (c) Rays EdTech
- */
 
 @WebServlet("/ctl/MyProfileCtl")
 public class MyProfileCtl extends BaseCtl<UserBean, UserModel> {
@@ -95,14 +87,18 @@ public class MyProfileCtl extends BaseCtl<UserBean, UserModel> {
 		bean.setGender(DataUtility.getString(request.getParameter("gender")));
 
 		bean.setDob(DataUtility.getDate(request.getParameter("dob")));
+		 
+		bean.setPassword(DataUtility.getString(request.getParameter("password")));
 
+		bean.setRoleId(DataUtility.getInt(request.getParameter("RoleId")));
+		
 		populateDTO(bean, request);
 
 		return bean;
 	}
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse  
 	 *      response)
 	 */
 	@Override
